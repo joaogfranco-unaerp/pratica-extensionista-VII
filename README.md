@@ -48,8 +48,5 @@ Variáveis de ambiente:
 
 ## Equipe
 
-- Nome - Código
-- Nome - Código
-- Nome - Código
-- Nome - Código
-- Nome - Código
+- João Gabriel Abrahão Franco (840222)
+- Miguel Vieira Pizzamiglio (839598)
