@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Painel | Buffet Bezan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <section id="loginView" class="login-wrap" hidden>
+    <form class="login-card" id="loginForm">
+      <div class="brand-mark" style="margin-bottom:14px">B</div>
+      <h1>Painel</h1>
+      <div id="loginErr"></div>
+      <div class="field"><label for="email">E-mail</label><input id="email" type="email" required autocomplete="username" /></div>
+      <div class="field"><label for="password">Senha</label><input id="password" type="password" required autocomplete="current-password" /></div>
+      <button class="btn" type="submit">Entrar</button>
+      <p style="text-align:center;margin-bottom:0"><a href="/" class="muted">Voltar ao cardápio</a></p>
+    </form>
+  </section>
+  <section id="appView" hidden>
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">B</div>
+        <div><h1>Painel</h1><small id="who"></small></div>
+      </div>
+      <nav class="admin-nav">
+        <button data-view="orders" class="active">Pedidos</button>
+        <button data-view="menu">Cardápio</button>
+        <a href="/api-docs" target="_blank">API</a>
+        <button id="logoutBtn">Sair</button>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div id="ordersView">
+        <div class="toolbar">
+          <h2>Pedidos</h2>
+          <div class="chips" id="filters"></div>
+        </div>
+        <div class="orders" id="orders"></div>
+        <p class="empty" id="ordersEmpty" hidden>Nenhum pedido aqui.</p>
+      </div>
+
+      <div id="menuView" hidden>
+        <div class="toolbar">
+          <h2>Cardápio</h2>
+          <div style="display:flex;gap:8px">
+            <button class="btn small ghost" id="newCatBtn">+ Categoria</button>
+            <button class="btn small" id="newItemBtn">+ Novo item</button>
+          </div>
+        </div>
+        <div class="table" id="menuList"></div>
+      </div>
+    </main>
+  </section>
+
+  <div id="modalRoot"></div>
+
+  <script src="/common.js"></script>
+  <script src="/admin.js"></script>
+</body>
+</html>
