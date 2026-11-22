@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: cardapio-bezan
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_EMAIL
+        value: admin@bezan.com
+      - key: ADMIN_PASSWORD
+        sync: false

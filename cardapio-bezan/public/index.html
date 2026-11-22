@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buffet Bezan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">B</div>
+      <div>
+        <h1>Buffet Bezan</h1>
+        <small>Ribeirão Preto</small>
+      </div>
+    </div>
+    <button class="cart-btn" id="cartBtn" aria-label="Abrir pedido">
+      Pedido <span class="badge" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <section class="hero">
+    <h2>Cardápio</h2>
+  </section>
+
+  <nav class="tabs" id="tabs"></nav>
+
+  <main class="container">
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>Nenhum item nesta categoria.</p>
+  </main>
+
+  <button class="floating-orders" id="myOrdersBtn" hidden>Meu pedido</button>
+
+  <div id="modalRoot"></div>
+
+  <script src="/common.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
